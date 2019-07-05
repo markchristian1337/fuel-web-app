@@ -12,7 +12,7 @@
 		<form class="quote-form">
 		<label>
 	  Gallons Requested:
-	  <input type="number" name="quantity" required>
+	  <input type="number" id="quantity" required>
 	  </label>
 	  <label>
 	  Delivery Address: <input type="text" name="delivery address" value="Client Address" readonly>
@@ -22,14 +22,29 @@
 		<input type="date" name="deliverydate">
 	  </label>
 	  <label>
-	  Suggested Price:
-	  <input type="number" name="price" readonly>
+	  Suggested Price (USD):
+	  <input type="number" id="price" value="2.50" readonly="">
 	  </label>
 	  <label>
-	  Total Amount Due:
-	  <input type="number" name="Total" readonly>
+	  <input type="button" onClick="multiplyBy()" Value="Calculate" />
+	  </label>
+	  <label>
+	  Total Amount Due (USD):<br>
+	  <span id = "total"></span>
 	  </label>
 		</form>
 	</div>
+
+	<script>
+	function multiplyBy(){
+        num1 = document.getElementById("quantity").value;
+        num2 = document.getElementById("price").value;
+        document.getElementById("total").innerHTML = num1 * num2;
+        document.getElementById("total").innerHTML = Number(document.getElementById("total").innerHTML).toFixed(2);
+	}
+	</script>
+
+
 </body>
 </html>
+
