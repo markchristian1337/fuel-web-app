@@ -84,3 +84,13 @@ label, input {
 label {
     margin-bottom: 20px;
 }
+
+.quote-form{
+	margin: 0 auto; 
+	width:250px;
+}
+
+.profile-form{
+	margin: 0 200px; 
+	width:250px;
+}
