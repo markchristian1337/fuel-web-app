@@ -1,26 +1,42 @@
 <html>
 
-	<head>
-	<title>Fuel Rate Web Application</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
+<head>
+<title>Fuel Rate Web Application</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-	<body>
-		<div class="loginbox">
+<body>
+	<div class="login-page">
+	<div class="form">
+		<form class="register-form">
+		<p><strong>Create Username</strong></p>
+		<input type="text" name="" placeholder="Enter Username"/>
+		<p><strong>Create Password</strong></p>
+		<input type="text" name="" placeholder="Enter Password"/>
+		<button>Register</button>
+		<p class="message">Already have an account? <a href="#">Login</a></p>
+		</form>
+
 		<img src="avatar.png" class="avatar">
-			<h1>Login</h1>
-			<form>
-				<p>Username</p>
-				<input type="text" name="" placeholder="Enter Username">
-				<p>Password</p>
-				<input type="Password" name="" placeholder="Enter Password">
-				<input type="submit" name="" value="Login">
-				<a href="#">Forgot your password?</a><br>
-				<a href="#">Don't have an account?</a>
-			</form>
+		<form class="login-form">
+		<p><strong>Username</strong></p>
+		<input type="text" name="" placeholder="Enter Username">
+		<p><strong>Password</strong></p>
+		<input type="Password" name="" placeholder="Enter Password">
+		<button>Login</button>
+		<p class="message">Don't have an account? <a href="#">Register</a></p>
+		</form>
+	</div>
+	</div>
 
-		</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-	</body>
+	<script>
+	$('.message a').click(function(){
+	$('form').animate({height: "toggle", opacity: "toggle"}, "slow");});
+	</script>
+
+
+</body>
 
 </html>

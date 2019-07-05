@@ -1,89 +1,78 @@
 body{
-	margin: 0;
-	padding: 0;
-	background: url(fuelbackground.jpg);
+	background-image: url(fuelbackground.jpg);
+	height: 100vh;
 	background-size: cover;
 	background-position: center;
-	font-family: sans-serif;
 }
 
-.loginbox{
-	width: 320px;
-	height: 420px;
-	background: #000;
+.login-page{
+	width: 360px;
+	padding: 10% 0 0;
+	margin: auto;
+}
+
+.form{
+	position: relative;
+	z-index: 1;
+	background: rgba(0, 0, 0, .8);
 	color: #fff;
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-50%,-50%);
-	box-sizing: border-box;
-	padding: 70px 30px;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
 }
 
-.avatar{
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	position: absolute;
-	top: -50px;
-	left: calc(50% - 50px);
-}
-
-h1{
-	margin: 0;
-	padding: 0 0 20px;
-	text-align: center;
-	font-size: 22px;
-}
-
-.loginbox p{
-	margin: 0;
-	padding: 0;
-	font-weight: bold;
-}
-
-.loginbox input{
-	width: 100%;
-	margin-bottom: 20px;
-}
-
-.loginbox input[type="text"], input[type="password"]
-{
+.form input{
+	font_family: "Roboto", sans-serif;
 	border: none;
+	outline: none;
 	border-bottom: 1px solid #fff;
 	background: transparent;
-	outline: none;
-	height: 40px;
+	width: 100%;
+	margin: 0 0 15px;
+	padding: 5px;
+	box-sizing: border-box;
 	color: #fff;
-	font-size: 16px;
+	font-size: 14px;
 }
 
-.loginbox input[type="submit"]
-{
-	border: none;
-	outline: none;
-	height: 40px;
+.form button{
+	font_family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	outline: 0;
 	background: #fb2525;
 	color: #fff;
-	font-size: 18px;
+	width: 100%;
+	border: 0;
+	padding: 15px;
+	font-size: 14px;
 	border-radius: 20px;
+	cursor: pointer;
 }
 
-.loginbox input[type="submit"]:hover
-{
-	cursor:pointer;
+.form button:hover,.form button:active{
 	background: #ffc107;
 	color: #000;
 }
 
-.loginbox a{
+.form .message{
 	text-decoration: none;
-	font-size: 12px;
-	line-height: 20px;
 	color: darkgrey;
 }
 
-.loginbox a:hover
-{
-	color: #ffc107;
+.form .message a{
+		color: #ffc107;
+	text-decoration: none;
+}
+
+.avatar{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 45px);
+}
+
+.form .register-form{
+	display: none;
 }
